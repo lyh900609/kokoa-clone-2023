@@ -90,6 +90,10 @@
 1. span안 요소의 위치 변경을 위해서는 display: block 처리해야함
    -> display는 inline임
 
+ㅁ6.23
+1. opacity: 0~1 ; 투명도 
+2. text-transform: uppercase ; 대문자로 변경
+
 ㅁ6.24
 1. position absolute는 상위 부모에 position relative가 필요함
   -> 그래야 그걸 기준으로 위치를 잡을수있음 
