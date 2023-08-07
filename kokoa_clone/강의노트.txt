@@ -1,0 +1,191 @@
+ㅁ6.8
+1. #login-form input:not([type="submit"]) {기존에 작동중인 요소}
+   어떠한 요소에 원하지 않는 작동 추가할 때 필요
+2. cursor: pointer;
+   어느 요소 위에 마우스 포인터 상단에 올시 마우스 포인터 변경
+3. border-radius: 5px;
+   경계 지름
+ㅁ6.9
+1. <form action="friends.html" method="get" id="login-form">
+   from에서 action은 이동할 화면, method 는 정보를 입력한다. get을 사용하면 input에서 입력된 정보를 획득.(input에 name 테그를 입력해야함)
+ㅁ6.10
+1. nav>ui>li*>a  =  <nav><ul><li><a href=""></a><li><li></li>...</ul></nav>
+   네비게이션바 빠르게 만들기
+2. 스타일 @import 순서
+  - 폰트 / reset.css / variables
+
+ㅁ6.11. 
+1.  reset.css의 a에   
+  - color: inherit;
+  - text-decoration: none;
+  두개 추가함: 밑줄이 있거나, 색상을 상속 받기를 원함
+2. 원하는 곳에 위치 고정방법(스크롤해도 안바뀜)
+  - position: fixed / bottom: 0 / width: 100%
+3. position: fixed 및 width 100% 일때 화면이 넘어가면?
+  - box-sizing: border-box
+
+ㅁ6.12
+1. width가 200px에 padding left를 50px 추가. 그럼 전체 길이가 250px가 됨
+2. 전체 길이가 늘어나는 것을 방지하기 위해   - box-sizing: border-box  사용
+  -> 박스 전체의 크기가 늘어나지 않게함
+
+ㅁ6.13
+1. span의 영역을 늘리고 싶다면 display: block을 써야함
+  ->div는 블록 레벨 요소 /span은 인라인 요소에
+2. 어떠한 영역을 둥글게 만들고 싶다면 
+  ->width 와 height 를 같게 하고 border-radius를 절반값으로 해야함
+3. position: absolute 
+   absolute 절대위치; relative 상대적
+   기준은 body이다. 어떤 요소에 relative를 적어주면, absolute는 그 요소를 기준으로 한다
+
+ㅁ6.14
+1. 클래스 안의 span 을 CSS에서 처리 방법
+  -> .클래스명 span
+
+ㅁ6.15
+1. i 요소는 다른 텍스트와 구분하는 부분을 나타냄. 보통 기울임꼴로 표시.
+
+ㅁ6.16
+1. <img src="#"> 
+  -> img 요소와 소스링크
+2. .클래스명:first-child {}
+  -> 어떤 요소 안의 첫번째 요소에 css
+3. 두개의 클래스에 같은 CSS
+  ->.클래스명1, .클래스명2 {}
+4. 요소안의 아이템 가로중앙정렬
+  -> align-items: center
+   
+ㅁ6.17
+1. 클래스 명에서 자식 만드는 법
+  -> ex: <div class="name1 name1.1"
+   -> 띄어쓰기. css에서 요소가 1.1에도 적용됨
+2. horizontal: 수평의
+3. variables 변수
+4. root { --name: css }
+   ->var(--name)
+
+ㅁ6.18 
+--
+
+ㅁ6.20
+1. <span class="a b">.. 
+   클랙스가 a, b 2개 적용됨
+2. flex-direction: row , column = 세로축, 가로축
+
+ㅁ6.21
+1. .find-icon__icon*4>span 
+  = <div class="find-icon__icon"><span></span></div> x 4 개 생성
+
+2. 아이템 배치
+ - display: flex 배치를 유연하게 바꿀수 있음
+ - justify-content: space-between 가로 배치를 균등하게
+ - flex-direction: column 배치를 가로축(위아래)로
+ - align-items: center (가로축)배치를 중앙정렬
+ - text-align 텍스트의 중앙정렬
+
+ 3. 아이콘 크기 조정
+  - .class_name i {font-size:00px} 로 조정 가능
+
+ㅁ6.22
+1. span안 요소의 위치 변경을 위해서는 display: block 처리해야함
+   -> display는 inline임
+
+ㅁ6.24
+1. position absolute는 상위 부모에 position relative가 필요함
+  -> 그래야 그걸 기준으로 위치를 잡을수있음 
+
+ㅁ6.25
+
+ㅁ6.26
+1. 하나의 부모를 둔 두개의 요소를 가로세로 배치 밑 중앙정렬 방법
+  -> 부모 display: flex ; 자식 flex-direction: column , align-itemss: center
+
+ㅁ6.26
+ 1. 리스트는 <ul><li><li>... </li></li></ul>
+
+ㅁ6.28
+ 1. id의 css는 # / class의 css는 .
+
+ㅁ6.29
+ 1. chat-screen은 스크롤을 위해 height를 11000vh로 설정함
+ 2. 박스크기 정하기
+   - box-sizing에서 border-box: 테두리를 기준; content-box: 콘텐츠의 크기를 기준
+ 3. 상단에 헤더 고정방법
+   - position: fixed 
+   - width: 100%
+   - box-sizing: border-box  
+  4. 2개의 클래스 css 적용 방법
+   #chat-screen .alt-header,
+   #chat-screen .status-bar { } 
+  5. 헤더 상단 고정:
+   - top 0
+  6. 레이어 조정방법!!!
+   - z-index: 10 
+
+  ㅁ6.29
+  
+  ㅁ6.31
+  1. border-radius: 는 px, % 모두 가능
+  2. 상위 div로 display: flex와 align-item: center가 상속되어, 자식div가 중앙으로 배치될때
+     -> 자식의 width를 100%로
+  3. span의 공간 가격 조정 
+    -> display: block을 하면 자신의 공간을 배치함
+  4. 말풍선 만드는법
+    -> border-radius를 전체를 준다 
+    -> border-top-left-radius: 0px
+
+  ㅁ6.32
+  1. flex에서 요소들의 순서를 바꾸는 방법
+    - flex-direction: row-reverse
+    - order에 순서 주기 order: 1 등
+  
+  ㅁ6.33
+  1. 입력창: 닫기 주의!
+  <input type="text" placeholder="메시지를 작성해주세요.." />
+  2. position: absolute 사용법
+     부모중에 position: relative를 명확히!
+
+  3. 박스 크기가 화면을 넘어가지 않게
+   - box-sizing: border-box
+  4. .exclass i {...} 에서 모든 자식 아이콘을 변화시키고 싶지 않다면
+   - .exclass > i {...} 바로 밑의 자식 아이콘만 변화시킴
+
+  5. button:focus 등 의미
+   - focus: 클릭 혹은 탭으로 선택시
+   - active: 클릭시
+   - hover: 마우스 대상 위에 위치
+
+   ㅁ6.34
+   1. 100vh, 100vw 의미는 가로,세로 100%
+    - height: 100vh; v=뷰포트
+  
+   ㅁ6.35
+   1. @keyframes 효과명 {from {opacity: 1;} to ... }
+     -> 적용할 요소에 animation: hideSplashScreen 1s ease-in-out;
+       -> 마지막 효과를 유지하기 위해 animation에 forwards 삽입
+        -> visivility: hidden; 해당요소가 사라지는 효과(클릭가능)
+   2. animation-delay 애니효과 지연
+
+   ㅁ6.36
+   1. @keyframes 효과명 {0% {transform: none/translateY/rotateY } }
+    - rotateY(000deg)
+    - translateY(000px)
+    - scaleX(2.0): 가로로 2배 확대
+   2. animation에 infinite 입력시 반복 / forwards 입력시 유지
+   3. will-change: transform 
+     -> animation에서 transform이 불안정하게 작동할 경우에 사용
+     -> 해당 작동의 그래픽카드등을 미리 준비해둠
+
+    ㅁ6.38
+    1. fadein 나타나는 효과
+    2. focus-within 어떠한 요소가 focus되어 있다.!!
+      -> .classname:focus-within: classname에 어떤 요소가 ~~
+      -> .classname:focus-within .classname2 {~~} : classname의 어떤요소가 focus될때 classname2가 ~로 변환된다.
+    3. tranform {from{} to{}} : @keyframes와 함께 사용
+       transition 클랙스에 직접 사용
+       - transision: all 3s ease-in-out ; 적용할 css요소, 듀레이션, 효과
+   
+   ㅁ6.40 
+   1. 핸드폰 사이즈에서만 화면 보이게
+     *가로사이즈에 따른 div 제거 방법
+     - @media screen and (max-width: 999px) { #no-mobile { display: none;} } 
